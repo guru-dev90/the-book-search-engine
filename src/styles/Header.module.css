@@ -1,0 +1,33 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid red;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+.rainbowTitle{
+    display: none;
+}
+
+.formContainer{
+    display: flex;
+    align-items: center;
+}
+
+@media (min-width: 900px){
+
+    .linkTitleContainer{
+        display: flex;
+    }
+
+    .rainbowTitle{
+        display: block;
+        font-family: 'Ruge Boogie', cursive;
+        font-size: 40px;
+        background-image: linear-gradient(to left, #d40000, #ffcc00, #0055d4, #00aa00, #822424);   -webkit-background-clip: text;
+        color: transparent;
+        margin-left: 1rem;
+    }
+}
+

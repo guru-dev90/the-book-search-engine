@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from "react"
+import { StateProvider } from "./context/Context"
+import { Switch, Route } from "react-router-dom"
+
+import styles from "./styles/App.module.css"
+
+import Home from "./Home"
+import Result from "./Result"
+import ErrorPage from "./ErrorPage"
+
 
 function App() {
+
+  const [booksArray, setBooksArray] = useState(null)
+
+  //console.log(booksArray)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <StateProvider values={{booksArray,setBooksArray}}>
+      <Switch>
+        <Route exact path="/">
+          <div className={styles["home-container"]}>
+            <Home />
+          </div>
+        </Route>
+        <Route path="/results">
+          <Result />
+        </Route>
+        <Route>
+          <ErrorPage />
+        </Route>
+      </Switch>
+    </StateProvider>
   );
 }
 
-export default App;
+export default App

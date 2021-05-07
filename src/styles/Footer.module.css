@@ -1,0 +1,26 @@
+.footerContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 20vh;
+    background-color: #9D1B00;
+    border-top: 1px solid black;
+    margin-top: 5rem;
+}
+
+.text{
+    color: white;
+
+}
+
+.iconContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.linkedinLink{
+    text-decoration: none;
+
+}
