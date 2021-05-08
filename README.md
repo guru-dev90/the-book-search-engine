@@ -83,33 +83,39 @@ In order to run the application you will need Node >= 10.16 and npm >= 5.6 avail
 
 ### Installation
 
-1. Clone the repo
+1. Clone the repo:
    ```sh
    git clone https://github.com/guru-dev90/the-book-search-engine
    ```
 
-2. Create a production build:
+2. Change current folder and install dependencies:
+   ```sh
+   cd the-book-search-engine
+	 npm install
+   ```
+	 
+3. Create a production build:
 
 	  ```sh
    npm run build
    ```
 
-3. Install npm serve globally
+4. Install npm serve globally:
    ```sh
 	 npm i -g serve
    ```
 	 
-3. You may serve it with a static server now
+5. You may serve it with a static server now:
    ```sh
 	 serve -s build
    ```
 	 
-4. Open your browser and go to:
+6. Open your browser and go to:
    ```sh
    http://localhost:5000/
    ```
 
-5. Enjoy!!!
+7. Enjoy!!!
 	 
 	 
 <!-- ROADMAP -->
